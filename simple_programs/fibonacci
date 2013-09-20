@@ -1,0 +1,25 @@
+push 0
+sto 0
+push 1
+sto 1
+rcl 1
+prn
+push 20 
+sto 2
+loop: rcl 0
+rcl 1
+add
+rcl 1
+sto 0
+sto 1
+rcl 1
+prn
+rcl 2
+push 1
+sub
+sto 2
+push 0
+rcl 2
+eq
+jif loop
+end
