@@ -1,0 +1,25 @@
+                    # Progressao Geometrica
+                    # Definicao de parametros:
+        push 1.5    # Razao.
+        sto 0
+        push 1      # Termo inicial.
+        sto 1
+        push 20     # Numero de termos a imprimir.
+        sto 2
+                    # Calculo dos termos.
+loop:   rcl 1       # Recupera e imprime termo,
+        prn
+        rcl 0
+        rcl 1
+        mul
+        sto 1
+
+        rcl 2       # Recupera o contador.
+        push 1
+        sub         # Decremeta o contador.
+        sto 2       
+        rcl 2
+        push 0      
+        ne          # Verifica condicao de termino.
+        jit loop    
+        end                        
